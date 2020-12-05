@@ -1,0 +1,17 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "![Design preview for the Todo app coding challenge](./img/design/desktop-preview.jpg)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "startDev": "nodemon app.js"
+  },
+  "author": "Billbern",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "sass": "^1.30.0"
+  }
+}
