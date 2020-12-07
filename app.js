@@ -1,6 +1,5 @@
 const express = require('express'),
          path = require('path');
-const { env } = require('process');
 
 
 let app = express();
