@@ -7,7 +7,7 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/base.css">
 
   <title>Frontend Mentor | Todo app</title>
 
@@ -16,22 +16,41 @@
 <body>
 
   <div class="container">
-    Todo
+    <div class="title_area">
+      <span class="title">Todo</span>
+      <img src="/img/icon-sun.svg" alt="light mode switch" />
+    </div>
+    <div class="todo_input">
+      <div class="check_complete">
+        <input type="radio" name="input_radio" id="inputRadio" />
+      </div>
+      <input type="text" name="to_add" id="to_add" />
+    </div>
+    <div class="todo_items">
+      <div class="items_added">
 
-    <!-- Add dynamic number --> items left
+      </div>
+      <div class="todo_footer">
+        <div class="todo_total">
+          <span class="items_left">0</span> items left
+        </div>
 
-    All
-    Active
-    Completed
+        <ul class="todo_filter">
+          <li> <a class="active" href="/">All</a></li>
+          <li><a href="/">Active</a></li>
+          <li><a href="/">Completed</a></li>
+        </ul>
 
-    Clear Completed
+        <span class="todo_clr"> <a href="/">Clear Completed</a></span>
+      </div>
+    </div>
 
-    Drag and drop to reorder list
+    <span class="todo_info">Drag and drop to reorder list</span>
   </div>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/Billbern">BillBern</a>.
   </div>
 
   <script src="js/index.js" type="text/js"></script>
