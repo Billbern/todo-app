@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+$text3-lightmode: hsl(220, 98%, 61%);
+$bg3-lightmode: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
+$bg1-lightmode: hsl(0, 0%, 98%);
+$bg2-lightmode: hsl(236, 33%, 92%);
+$text4-lightmode: hsl(233, 11%, 84%);
+$text2-lightmode: hsl(236, 9%, 61%);
+$text1-lightmode: hsl(235, 19%, 35%);
+
+$bg1-darkmode: hsl(235, 21%, 11%);
+$bg2-darkmode: hsl(235, 24%, 19%);
+$text1-darkmode: hsl(234, 39%, 85%);
+$texthover-darkmode: hsl(236, 33%, 92%);
+$text2-darkmode: hsl(234, 11%, 52%);
+$text3-darkmode: hsl(233, 14%, 35%);
+$bg3-darkmode: hsl(237, 14%, 26%);
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-size: 18px;
+  font-weight: 400;
+  align-items: center;
+  background-size: 100%;
+  color: $text1-darkmode;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-color: $bg1-darkmode;
+  background-position: top center;
+  font-family: "Josefin Sans", sans-serif;
+  background-image: url("../img/bg-desktop-dark.jpg");
+
+  .container {
+    width: 38%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    & > div {
+      width: 100%;
+    }
+  }
+}
+
+a {
+  color: $text3-darkmode;
+
+  &:hover {
+    color: $texthover-darkmode;
+  }
+}
+
+.container {
+  .title_area {
+    display: flex;
+    justify-content: space-between;
+
+    & > span {
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      font-size: 36px;
+      font-weight: 700;
+    }
+  }
+
+  .todo_input {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-top: 24px;
+    padding-left: 16px;
+    border-radius: 8px;
+    align-items: center;
+    background-color: $bg2-darkmode;
+
+    .check_complete {
+      width: 18px;
+      height: 18px;
+      display: flex;
+      margin-right: 8px;
+      border-radius: 50%;
+      justify-content: center;
+      border: 1px solid $text2-darkmode;
+
+      input[type="radio"] {
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+      }
+
+      & + input[type="radio"]:checked {
+        background-image: url("../img/icon-check.svg");
+      }
+    }
+
+    input[type="text"] {
+      border: none;
+      font-size: 18px;
+      background: transparent;
+      color: $texthover-darkmode;
+    }
+  }
+
+  .todo_items {
+    width: 100%;
+    min-height: 50%;
+    margin-top: 16px;
+    border-radius: 8px;
+    background: $bg2-darkmode;
+
+    .items_added {
+      min-height: 90%;
+    }
+
+    .todo_footer {
+      width: 100%;
+      height: 10%;
+      display: flex;
+      padding: 0 16px;
+      font-size: 14px;
+      align-items: center;
+      color: $text3-darkmode;
+      border-top: 1px solid $bg3-darkmode;
+      justify-content: space-between;
+
+      .todo_filter {
+        flex-basis: 33%;
+        display: flex;
+        list-style: none;
+        justify-content: space-evenly;
+
+        .active {
+          color: $text3-lightmode;
+        }
+      }
+
+      .todo_clr {
+        background: transparent;
+        border: none;
+        color: $text3-darkmode;
+      }
+    }
+  }
+
+  .todo_info {
+    margin-top: 48px;
+    font-size: 14px;
+    color: $text3-darkmode;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  height: min-content;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
