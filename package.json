@@ -4,6 +4,7 @@
   "description": "![Design preview for the Todo app coding challenge](./img/design/desktop-preview.jpg)",
   "main": "app.js",
   "scripts": {
+    "sass": "npx node-sass -w ./static/scss -o ./static/css",
     "start": "node app.js",
     "startDev": "nodemon app.js"
   },
